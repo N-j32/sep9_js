@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //concat
+        const b=['a','m'];
+        const b1=['bh','kl'];
+        const b3=b.concat(b1);
+        document.write(b3);
+        //reverse
+        document.write("<hr>");
+        var rev=b3.reverse();
+        document.write(rev);
+        document.write("<hr>");
+        //indexof and lastindexof
+        const clr=['an','man','pnagg'];
+        document.write("<br>");
+        var clr_an=clr.indexOf('an');
+        document.write(clr_an);
+        document.write("<hr>");
+        //slice
+        var clrs=clr.slice(0,2);
+        document.write("<br>");
+        document.write(clrs);
+        document.write("<hr>");
+        //filter
+        document.write(clr);
+        var filter_data=clr.filter(fil=>fil.length==2)
+        document.write("<br>");
+        document.write(filter_data);
+        var filter_data=clr.filter(fil=>fil.length==3)
+        document.write("<br>");
+        document.write(filter_data);
+    </script>
+</body>
+</html>

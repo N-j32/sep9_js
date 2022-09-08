@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="addr"></p>
+    <script>
+        const addr = {
+            street_num: 123,
+            city: "mlr",
+            pincode: 999
+        }
+        document.getElementById("addr").innerHTML = addr.street_num + " <br>" + addr.city
+
+    </script>
+    <!--events -->
+    <button onclick="this.innerHTML=Date()">Today date is ?</button>
+
+    <select onchange="alert('selection changed')">
+
+    <option>java</option>
+    <option>pyhton</option>
+    <option>c</option>
+    <hr>
+    <input type="text" onkeypress="alert('text entered')">
+    <br>
+    <input type="text" onfocus="f()" id="name">
+<script>
+    function f(){
+        var e=doc.getElementById('name');
+     e.style.backgroundColor="blue";
+
+     e.style.height='100px';
+     e.style.width='100px'
+    }
+</script>
+<br>
+<p id="hover" onmouseover="h()" onmouseleave="" style="background-color: 'blue';"></p>
+<script>
+    function h(){
+        var a=document.getElementById('hover');
+        a.style.backgroundColor='red';
+        a.style.height='100px';
+        a.style.width='100px';
+    }
+</script>
+</body>
+</body>
+
+</html>
