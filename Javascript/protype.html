@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function without prototype-only one property can access
+        function course_details(){
+            cid=100;
+            cname=".net";
+        }
+        var c=new course_details();
+        c.course_duration="120hrs";
+        document.write(c.course_duration +"<br>");
+        var c1=new course_details();
+        document.write(c1.course_duration +"<br>");//cannot access
+        
+    </script>
+    <script>
+        //fnctn with protype- any num of properties can be accesed
+        function course_details(){
+            cid=200;
+            cname="..net";
+        }
+        course_details.prototype.course_duration="120";
+        //instance for course_details
+        var c=new course_details();
+        document.write(c.course_duration +"<br>");
+        var c1=new course_details();
+        document.write(c1.course_duration +"<br>");
+
+
+    </script>
+    <script>
+        //creat fnctn with prototype
+        course_details.prototype.display=function(){
+            return cid + " "+cname;
+        }
+        var c2=new course_details();
+        document.write("<br>"+"<hr>"+c2.course_duration+"<br>");
+        document.write(c2.display());
+    </script>
+    <script>
+        //arrow fnctn example
+        //normal fnctn
+        function display(){
+            document.write("<br>"+"welcome");
+        }
+        //arrow fnctn
+        let dis=()=>document.write("<br>"+"welcome arrow");
+        let disp=(x,y)=>document.write("<br>"+"sum" +(x+y));
+    //invoke fnctns
+    display();
+    disp(10,50);
+    dis()
+    </script>
+</body>
+</html>

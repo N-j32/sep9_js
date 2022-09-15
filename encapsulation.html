@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function without class
+        function td(tid,tname)
+        {
+            var id=tid;
+            var  name=tname;
+            //encap
+            Object.defineProperty
+           (
+                this,"ID",
+                {
+                    get:function(){
+                        return id;
+                    },
+                    set:function()
+                    {
+                        this.id=id;
+                    }
+                }
+           );
+           Object.defineProperty
+           (
+                this,"NAME",
+                {
+                    get:function(){
+                        return name;
+                    },
+                    set:function()
+                    {
+                        this.name=name;
+                    }
+                }
+           )
+        }
+        var t=new td(10, "nj");
+        console.log(t.ID);
+        console.log(t.NAME);
+
+    </script>
+    <script>
+        //using class
+        class Employee{
+            constructor(){
+                var eid;
+                var ename;
+            }
+            
+            setID(id){
+                this.eid=id;
+            }
+        }
+        var e=new Employee();
+        e.setID(101);
+        //console.log(e.getID());
+    </script>
+    <script>
+        
+        class add{
+            //# used to make the var private
+            //snum;
+            //city;//public
+            //#pincode;//private
+            constructor(name,city,pincode){
+                this.snum=name;
+                this.city=city;
+                let pincode=pincode;
+                //to access the private data outside the class we r using
+                this.get=()=>{
+                    return pincode;
+                }
+            }
+            //display frst n then declaretion-hoist()
+            hoist(){
+                console.log("value is" +a);
+                var a=10;
+            }
+            
+            
+        }
+        var ad=new add("mlr","blr",888);
+        console.log("address:"+ad.pincode);//without using get method if we use this we will get msg undefined.
+        console.log(ad.get());
+    </script>
+</body>
+</html>

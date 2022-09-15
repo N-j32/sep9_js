@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var eng=90, phy=80, chem=70, math=60, comp=78;
+        var total=0,average=0,percentage=0;
+        total = eng + phy + chem + math + comp;
+        average = total / 5.0;
+        percentage = (total / 500.0) * 100;
+        document.write("Total mark is:" +total+"<br>");
+            
+            document.write("Average mark is:" + average+"<br>");
+            
+            document.write("percentage obtaned is: " +percentage +"%"+"<hr>");
+            
+        if(average>=80){
+            document.write("Grade is A");
+            document.wrire("<hr>");
+        }
+        else if(average<80 && average>=60){
+            document.write("Grade is B"+"<hr>");
+           
+
+        }
+        else if(average<60 && average>=45){
+            document.write("Grade is C"+"<hr>");
+            
+
+        }
+        else{
+            document.write("Grade is F"+"<hr>");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("The value of PI is: " + Math.PI);
+        document.write("<hr>")
+        //round
+        document.write("The rounded value of 5.5 is : " + Math.round(5.5)+"<br>");
+        document.write("The rounded value of 5.2 is : " + Math.round(5.2)+"<br>");
+        document.write("<hr>")
+        //ciel n floor
+        document.write("The ciel value of 5.5 is : " + Math.ceil(5.5)+"<br>");
+        document.write("The floor value of 5.5 is : " + Math.floor(5.5)+"<br>");
+        document.write("<hr>")
+        //trunc - returns int 
+        document.write("The  value of 5.9 is : " + Math.trunc(5.9)+"<br>");
+        document.write("<hr>")
+        //Math.sign(x) returns if x is negative, null or positive:
+        document.write("The  value of 5.9 is : " + Math.sign(5.9)+"<br>");
+        document.write("The  value of 5.9 is : " + Math.sign(-5.9)+"<br>");
+        document.write("The  value of 5.9 is : " + Math.sign(0)+"<br>");
+        document.write("<hr>")
+         //pow
+         document.write("The  value of 2^2 is : " + Math.pow(2,2)+"<br>");
+         document.write("<hr>")
+         //square root
+         document.write("The  square root of 64 is : " + Math.sqrt(64)+"<br>");
+         document.write("<hr>")
+         //Math.abs(x) returns the absolute (positive) value of x:
+         document.write("The  absolute value of -64 is : " + Math.abs(-64)+"<br>");
+         document.write("<hr>")
+         /*Math.sin(x) returns a value between -1 and 1 of the angle x (given in radians).
+         to convert degrees to radians:Angle in radians = Angle in degrees x PI / 180.*/
+         document.write("The  sin(90deg) is : " + Math.sin(90* Math.PI / 180)+"<br>");
+         document.write("The  sin(0deg) is : " + Math.sin(0* Math.PI / 180)+"<br>");
+         document.write("The  sin(30deg) is : " + Math.sin(30* Math.PI / 180)+"<br>");
+         document.write("The  cos(0deg) is : " + Math.cos(0* Math.PI / 180)+"<br>");
+         document.write("The  cos(60deg) is : " + Math.cos(60* Math.PI / 180)+"<br>");
+         document.write("The  tan(0deg) is : " + Math.tan(0* Math.PI / 180)+"<br>");
+         
+         document.write("<hr>")
+         //min max
+         document.write("The  min value  is : " + Math.min(-64,9,0,-1,7)+"<br>");
+         document.write("<hr>")
+         document.write("The  max value  is : " + Math.max(-64,9,0,-1,7)+"<br>");
+         document.write("<hr>")
+         //log
+         document.write("The  log(1) value  is : " + Math.log(1)+"<br>");
+         document.write("<hr>")
+         //date function
+         document.write(new Date)
+         document.write("<br>")
+         const d=new Date()
+         document.write("today's date: "+d.getDate())
+         document.write("<br>")
+         document.write("day is: "+d.getDay())
+         document.write("<br>")
+         document.write("current year: "+d.getFullYear())
+         document.write("<br>")
+         document.write("current year: "+d.getMonth())
+         document.write("<hr>")
+         
+
+
+
+
+
+
+    </script>
+    <script>
+        //set date
+        const e = new Date();
+         
+        document.write( e)
+         document.write("<br>")
+         e.setMinutes(30);
+         document.write( e)
+         document.write("<br>")
+         e.setHours(6);
+         document.write( e)
+         document.write("<br>")
+         e.setFullYear(2023);
+         document.write( e)
+         document.write("<br>")
+         //month starts with 0-11
+         e.setFullYear(2022, 3, 15 );
+         document.write( e)
+         document.write("<br>")
+        
+
+    </script>
+</body>
+</html>

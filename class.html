@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Class
+        class Trainee {
+            //creation of constructor
+            //constructor() {
+            //    console.log("this is default constructor")
+            //}
+            //parameterized const
+            constructor(tid,tname){
+                this.id=tid;
+                this.name=tname;
+            }
+            //function
+            tdetails(){
+                return this.id + " " +this.name;
+            }
+           
+        }
+         //instance for the class
+         var td=new Trainee();//invoke default cons
+         //invoke para const
+         var td1=new Trainee(101, "nj");
+         console.log(td1.id);
+         console.log(td1.name);
+         console.log(td1.tdetails());
+    </script>
+</body>
+
+</html>
